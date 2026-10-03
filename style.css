@@ -1,0 +1,384 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8edda;
+    color: #70412f;
+    font-family: Georgia, "Times New Roman", serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   CADA IMAGEM DO CONVITE
+   ========================= */
+
+.pagina {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 15px;
+
+    background: #f8edda;
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+
+/* A imagem nunca ultrapassa
+   a largura da tela */
+
+.pagina img {
+    display: block;
+
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+
+    margin: 0 auto;
+
+    border-radius: 2px;
+
+    box-shadow:
+        0 8px 25px rgba(112, 65, 47, 0.08);
+}
+
+
+/* =========================
+   PRIMEIRA IMAGEM
+   ========================= */
+
+.abertura {
+    min-height: 100vh;
+    padding: 20px 10px;
+}
+
+
+/* =========================
+   ÚLTIMA PARTE
+   ========================= */
+
+.final {
+    flex-direction: column;
+
+    padding-bottom: 60px;
+}
+
+
+/* =========================
+   ÁREA DOS BOTÕES PRINCIPAIS
+   ========================= */
+
+.botoes-final {
+    width: 100%;
+    max-width: 760px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================
+   BOTÃO DE LOCALIZAÇÃO
+   ========================= */
+
+.botao-localizacao {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 0;
+
+    padding: 14px 25px;
+
+    background: #d96b3b;
+    color: #fffaf0;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 5px 15px rgba(112, 65, 47, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.botao-localizacao:hover {
+    background: #c85b32;
+    transform: translateY(-2px);
+}
+
+.botao-localizacao:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================
+   BOTÃO CONFIRMAR PRESENÇA
+   ========================= */
+
+.botao-presenca {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 0;
+
+    padding: 14px 25px;
+
+    background: #d96b3b;
+    color: #fffaf0;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 5px 15px rgba(112, 65, 47, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.botao-presenca:hover {
+    background: #c85b32;
+    transform: translateY(-2px);
+}
+
+.botao-presenca:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================
+   ÍCONE DO WHATSAPP
+   ========================= */
+
+.icone-whatsapp {
+    width: 21px;
+    height: 21px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-whatsapp svg {
+    width: 21px;
+    height: 21px;
+
+    fill: currentColor;
+}
+
+
+/* =========================
+   MENSAGEM FINAL
+   ========================= */
+
+.mensagem-final {
+    margin-top: 25px;
+
+    color: #c85b32;
+
+    font-size: 1.6rem;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* =========================
+   CELULAR
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .pagina {
+        min-height: auto;
+
+        padding: 15px 8px;
+    }
+
+
+    .abertura {
+        min-height: auto;
+
+        padding: 8px 4px 20px;
+    }
+
+
+    .pagina img {
+        width: 100%;
+        max-width: 100%;
+
+        box-shadow: none;
+    }
+
+
+    /* BOTÕES PRINCIPAIS LADO A LADO */
+
+    .botoes-final {
+        gap: 8px;
+
+        padding: 0 5px;
+
+        margin-top: 20px;
+    }
+
+
+    .botoes-final .botao-localizacao,
+    .botoes-final .botao-presenca {
+        flex: 1;
+
+        min-width: 0;
+
+        padding: 13px 8px;
+
+        font-size: 0.78rem;
+
+        white-space: nowrap;
+    }
+
+
+    .icone-whatsapp {
+        width: 18px;
+        height: 18px;
+    }
+
+
+    .icone-whatsapp svg {
+        width: 18px;
+        height: 18px;
+    }
+
+
+    .mensagem-final {
+        font-size: 1.55rem;
+    }
+}
+
+
+/* =========================
+   TELAS MUITO PEQUENAS
+   ========================= */
+
+@media (max-width: 380px) {
+
+    .pagina {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+
+    .botoes-final {
+        gap: 6px;
+    }
+
+
+    .botoes-final .botao-localizacao,
+    .botoes-final .botao-presenca {
+        padding: 12px 5px;
+
+        font-size: 0.68rem;
+    }
+
+
+    .mensagem-final {
+        font-size: 1.4rem;
+    }
+}
+
+
+/* =========================
+   ANIMAÇÃO AO ROLAR
+   ========================= */
+
+.pagina.visivel {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+/* =========================
+   BOTÃO VOLTAR AO INÍCIO
+   ========================= */
+
+.botao-voltar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 20px;
+
+    padding: 9px 18px;
+
+    background: #d96b3b;
+    color: #fffaf0;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 4px 12px rgba(112, 65, 47, 0.15);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.botao-voltar:hover {
+    background: #c85b32;
+    transform: translateY(-2px);
+}
+
+.botao-voltar:active {
+    transform: scale(0.96);
+}
